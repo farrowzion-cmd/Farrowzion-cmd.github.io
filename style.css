@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+    color: #00FF00; /* Bright green text */
+    font-family: 'Source Code Pro', monospace; /* Monospaced font for that techy look */
+    margin: 0;
+    padding: 20px;
+    overflow: hidden; /* Hide scrollbars for a cleaner terminal look */
+}
+
+.terminal {
+    white-space: pre-wrap; /* Preserves formatting and wraps text */
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+.line::after {
+    content: "|"; /* Blinking cursor effect */
+    animation: blink 1s step-end infinite;
+    display: inline;
+}
+
+@keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
